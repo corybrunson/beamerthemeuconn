@@ -1,0 +1,20 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{test}[1][]
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,2);
+  \fill[color=uconnnavyblue] (0,0) rectangle(\the\paperwidth,2);
+   \ifx\insertframesubtitle\@empty%
+      {\node[anchor=west, white,font=\large] at (3.2,0.61){\insertframetitle};}
+      \else%
+      {\node[anchor= west, white,font=\large] at (3.2,0.81){\insertframetitle};%
+       \node[anchor= west, white,font=\small] at (3.2,0.41){\insertframesubtitle};}%
+      \fi
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+\mode<all>

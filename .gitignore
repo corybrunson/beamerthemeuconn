@@ -1,0 +1,15 @@
+# generated files
+*.pdf
+
+# LaTeX-generated files
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+
+# compressed files
+*.zip
+*.gz
