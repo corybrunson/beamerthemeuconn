@@ -11,6 +11,11 @@
 \useinnertheme{default}
 \usecolortheme{uconn}
 
+\setbeamercolor*{titlelike}{
+  bg=uconn navy blue,
+  fg=uconn white
+}
+
 \title[Beamer colors for UConn]{A Beamer color theme\\ for the University of Connecticut}
 \subtitle{hopefully one of a package of themes}
 \author[Cory Brunson]{Jason Cory Brunson, PhD}
@@ -146,15 +151,17 @@ Color names are based on the UConn Brand color palette.
 \end{frame}
 
 
-\begin{frame}{Changing the theme}
+\begin{frame}[fragile]{Changing the theme}
 
-You can change the default colors by editing the color theme file {\tt beamercolorthemeuconn.sty}.
+You can change the default colors by using setbeamercolor in the preamble, as i did:
+\begin{verbatim}
+\setbeamercolor*{titlelike}{
+  bg=uconn navy blue,
+  fg=uconn white
+}
+\end{verbatim}
+\ldots or by editing the color theme file {\tt beamercolorthemeuconn.sty}.
 Please \hyperlink{mailto:brand@uconn.edu}{check with the Brands office} about using the derivative theme, e.g.\ one with the colors themselves altered.
-
-\vfill
-If you have suggestions for improvement, please let me know!
-
-\center\hyperlink{mailto:brunson@uchc.edu}{\beamerbutton{Email Cory}}
 
 \end{frame}
 
@@ -174,6 +181,11 @@ I relied heavily on the following resources:
 \item several \href{http://brand.uconn.edu/resources/powerpoint-templates/}{PowerPoint templates}
 \end{itemize}
 \end{itemize}
+
+\vfill
+If you have suggestions for improvement, please let me know!
+
+\center\hyperlink{mailto:brunson@uchc.edu}{\beamerbutton{Email Cory}}
 
 \end{frame}
 
