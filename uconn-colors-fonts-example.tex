@@ -3,21 +3,19 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-
+\useinnertheme{default}
 \useoutertheme[footline=authorinstitute,subsection=true]{miniframes}
 %\useoutertheme{sidebar}
-\useinnertheme{default}
 \usecolortheme{uconn}
+\usefonttheme{uconn}
 
 \setbeamercolor*{titlelike}{
   bg=uconn navy blue,
   fg=uconn white
 }
 
-\title[Beamer colors for UConn]{A Beamer color theme\\ for the University of Connecticut}
-\subtitle{hopefully one of a package of themes}
+\title[Beamer colors and fonts for UConn]{Beamer color and font themes\\ for the University of Connecticut}
+\subtitle{part of a suite of themes}
 \author[Cory Brunson]{Jason Cory Brunson, PhD}
 \institute[UConn Health]{Center for Quantitative Medicine\\ University of Connecticut School of Medicine}
 \date{\today}
@@ -25,6 +23,7 @@
 \newtheorem{remark}{Remark}
 
 \begin{document}
+
 
 \begin{frame}
 \titlepage
@@ -37,6 +36,16 @@
 
 
 \section{Theme defaults}
+
+\begin{frame}{Default font family}
+
+The default font family is Helvetica.
+
+\vfill
+However, Brands recommends Arial, which is used in the PowerPoint templates (see the \hyperlink{slide:acknowledgments}{Acknowledgments slide}).
+
+\end{frame}
+
 
 \begin{frame}[fragile]{Palette colors}
 
@@ -117,7 +126,7 @@ The symbol colors for itemized and enumerated lists progress
 \alert{Alerted text is rendered in orange-gold.}
 
 \vfill\begin{remark}
-Block and caption titles are rendered in dark red.
+Block and caption titles are boldfaced and rendered in dark red.
 \end{remark}
 
 \vfill
@@ -188,5 +197,6 @@ If you have suggestions for improvement, please let me know!
 \center\hyperlink{mailto:brunson@uchc.edu}{\beamerbutton{Email Cory}}
 
 \end{frame}
+
 
 \end{document}
