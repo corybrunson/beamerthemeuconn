@@ -1,5 +1,9 @@
 sandbox/
 
+# Mac files
+.DS_Store
+.Icon*
+
 # generated files
 *.pdf
 
