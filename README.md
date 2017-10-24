@@ -6,10 +6,10 @@ This is a repo for the development of LaTeX themes and templates for the Univers
 
 The first task is to create the following coordinated Beamer themes:
 
-- `beamercolorthemeuconn.sty` (Beamer color theme)
-- `beamerinnerthemeuconn.sty` (Beamer inner theme, planned)
-- `beamerouterthemeuconn.sty` (Beamer outer theme, planned)
-- `beamerthemeuconn.sty` (Beamer theme incorporating the above)
+- `beamercolorthemeuconn.sty` (color theme)
+- `beamerinnerthemeuconn.sty` (inner theme, planned)
+- `beamerouterthemeuconn.sty` (outer theme, planned)
+- `beamerthemeuconn.sty` (theme incorporating the above)
 
 While not yet planned, it would be useful to include poster and report templates as well.
 
