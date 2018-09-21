@@ -4,10 +4,7 @@ sandbox/
 .DS_Store
 .Icon*
 
-# generated files
-*.pdf
-
-# LaTeX-generated files
+# auxiliary TeX files
 *.aux
 *.log
 *.nav
