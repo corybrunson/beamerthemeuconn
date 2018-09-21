@@ -2,20 +2,38 @@
 
 This is a repo for the development of LaTeX themes and templates for the University of Connecticut, to complement the PowerPoint themes available on the [Brand Standards website](http://brand.uconn.edu/resources/powerpoint-templates/).
 
-## Themes
+## Contents
 
-The first task is to create the following coordinated Beamer themes:
+### Themes
+
+This repo contains the following coordinated Beamer themes:
 
 - `beamercolorthemeuconn.sty` (color theme)
 - `beamerinnerthemeuconn.sty` (inner theme)
 - `beamerouterthemeuconn.sty` (outer theme)
 - `beamerthemeuconn.sty` (theme incorporating the above)
 
-While not yet planned, it would be useful to include poster and report templates as well.
+They're not complete, but they demonstrate the basics of each type of theme.
+
+### Templates
+
+Three templates are included, which illustrate the color and font themes (`uconn-color-font-example.tex`), the inner and outer themes (`uconn-inner-outer-example.tex`), and all four themes (`uconn-theme-example.tex`).
+
+It would be useful to include poster and report templates as well; i don't have plans for this, but contributions would be welcome.
 
 ## Use
 
+### Current versions
+
 The examples (the `.tex` files) illustrate how to use the themes in LaTeX documents.
+
+To use these themes in your own Beamer slideshow, either store the `.sty` files and the `images` folder in the same directory as the `.tex` file, or clone this repo and edit one of the `.tex` files into your own slideshow. I have not yet tried installing them in a `texmf` directory.
+
+To make subtle changes, for example to remove the oak leaf background or to permute the bullet point colors, edit the `.sty` files directly.
+
+### Contributions
+
+If you think you've come up with an improvement, please suggest it in an [issue](https://guides.github.com/features/issues/) or send a [pull request](https://guides.github.com/activities/forking/)!
 
 ## License
 
