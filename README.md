@@ -31,9 +31,11 @@ To use these themes in your own Beamer slideshow, either store the `.sty` files 
 
 To make subtle changes, for example to remove the oak leaf background or to permute the bullet point colors, edit the `.sty` files directly.
 
-### Contributions
+### Ongoing development
 
-If you think you've come up with an improvement, please suggest it in an [issue](https://guides.github.com/features/issues/) or send a [pull request](https://guides.github.com/activities/forking/)!
+To see several university themes that illustrate a range of design space, check out [Martin Madsen's Ultimate Beamer Theme List](https://github.com/martinbjeldbak/ultimate-beamer-theme-list).
+
+If you think these themes could be improved, please make suggestions in an [issue](https://guides.github.com/features/issues/) or send a [pull request](https://guides.github.com/activities/forking/)!
 
 ## License
 
