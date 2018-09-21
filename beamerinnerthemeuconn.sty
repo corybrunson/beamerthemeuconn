@@ -3,16 +3,16 @@
 % Introduce oak leaf math symbols
 % https://tex.stackexchange.com/a/31492
 \newcommand{\oakleaf}{\ensuremath{
-  \mathchoice{\includegraphics[height=1.75ex, trim=0 50 0 0]{images/oak-leaf-black.png}}
-    {\includegraphics[height=1.5ex, trim=0 50 0 0]{images/oak-leaf-black.png}}
-    {\includegraphics[height=1.25ex, trim=0 50 0 0]{images/oak-leaf-black.png}}
-    {\includegraphics[height=.75ex, trim=0 50 0 0]{images/oak-leaf-black.png}}
+  \mathchoice{\includegraphics[height=1.75ex, trim=0 50 0 0]{images/oak-leaf/oak-leaf-black.png}}
+    {\includegraphics[height=1.5ex, trim=0 50 0 0]{images/oak-leaf/oak-leaf-black.png}}
+    {\includegraphics[height=1.25ex, trim=0 50 0 0]{images/oak-leaf/oak-leaf-black.png}}
+    {\includegraphics[height=.75ex, trim=0 50 0 0]{images/oak-leaf/oak-leaf-black.png}}
 }}
 \newcommand{\oakleafbox}{\ensuremath{
-  \mathchoice{\includegraphics[height=1.75ex]{images/oak-leaf-white.eps}}
-    {\includegraphics[height=1.5ex]{images/oak-leaf-white.eps}}
-    {\includegraphics[height=1.25ex]{images/oak-leaf-white.eps}}
-    {\includegraphics[height=.75ex]{images/oak-leaf-white.eps}}
+  \mathchoice{\includegraphics[height=1.75ex]{images/oak-leaf/oak-leaf-white.eps}}
+    {\includegraphics[height=1.5ex]{images/oak-leaf/oak-leaf-white.eps}}
+    {\includegraphics[height=1.25ex]{images/oak-leaf/oak-leaf-white.eps}}
+    {\includegraphics[height=.75ex]{images/oak-leaf/oak-leaf-white.eps}}
 }}
 
 % Suppress all navigation symbols
@@ -24,13 +24,6 @@
 
 % Use oak leaf as QED symbol
 \setbeamertemplate{qed symbol}{\oakleafbox}
-
-% Background image
-% MOVE TO OUTER THEME
-\usebackgroundtemplate
-{
-  \includegraphics[height=\paperheight, trim=170 0 0 0, clip=true, decodearray={0.9 1 0.9 1 0.9 1}]{images/oak-leaf-blue.png}
-}
 
 % Title page (arguments currently ignored)
 \defbeamertemplate*{title page}{uconn}[1][]
