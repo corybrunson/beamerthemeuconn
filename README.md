@@ -8,7 +8,7 @@ The first task is to create the following coordinated Beamer themes:
 
 - `beamercolorthemeuconn.sty` (color theme)
 - `beamerinnerthemeuconn.sty` (inner theme)
-- `beamerouterthemeuconn.sty` (outer theme, planned)
+- `beamerouterthemeuconn.sty` (outer theme)
 - `beamerthemeuconn.sty` (theme incorporating the above)
 
 While not yet planned, it would be useful to include poster and report templates as well.
