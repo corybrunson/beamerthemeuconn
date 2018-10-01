@@ -2,8 +2,6 @@
 
 This is a repo for the development of LaTeX themes and templates for the University of Connecticut, to complement the PowerPoint themes available on the [Brand Standards website](http://brand.uconn.edu/resources/powerpoint-templates/).
 
-![UConn Theme example](uconn-theme-example.pdf)
-
 ## Contents
 
 ### Themes
