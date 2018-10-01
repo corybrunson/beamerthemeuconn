@@ -9,6 +9,7 @@ This is a repo for the development of LaTeX themes and templates for the Univers
 This repo contains the following coordinated Beamer themes:
 
 - `beamercolorthemeuconn.sty` (color theme)
+- `beamerfontthemeuconn.sty` (font theme)
 - `beamerinnerthemeuconn.sty` (inner theme)
 - `beamerouterthemeuconn.sty` (outer theme)
 - `beamerthemeuconn.sty` (theme incorporating the above)
