@@ -30,7 +30,7 @@ The examples (the `.tex` files) illustrate how to use the themes in LaTeX docume
 
 To use these themes in your own Beamer slideshow, either store the `.sty` files and the `images` folder in the same directory as the `.tex` file, or clone this repo and edit one of the `.tex` files into your own slideshow. I have not yet tried installing them in a `texmf` directory.
 
-To make subtle changes, for example to remove the oak leaf background or to permute the bullet point colors, edit the `.sty` files directly.
+To make subtle changes, for example to remove the oak leaf background or to permute the bullet point colors, edit the `.sty` files directly. (In future i hope to include theme options that will allow users to remove or change certain features using preamble commands.)
 
 ### Ongoing development
 
