@@ -19,6 +19,7 @@ They're not complete, but they demonstrate the basics of each type of theme.
 ### Templates
 
 Three templates are included, which illustrate the color and font themes (`uconn-color-font-example.tex`), the inner and outer themes (`uconn-inner-outer-example.tex`), and all four themes (`uconn-theme-example.tex`).
+Additionally, the Markdown document `uconn-theme-markdown.md` illustrates how to use the `uconn` Beamer theme in a [Pandoc](https://pandoc.org/) workflow.
 
 It would be useful to include poster and report templates as well; i don't have plans for this, but contributions would be welcome.
 
