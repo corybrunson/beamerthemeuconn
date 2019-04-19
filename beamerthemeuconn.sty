@@ -1,3 +1,11 @@
+%\NeedsTeXFormat{LaTeX2e}
+%\ProvidesPackage{beamerthemeuconn}
+
+% Pass options to sub-themes
+\DeclareOptionBeamer{bgleaf}{\PassOptionsToPackage{bgleaf}{beamerouterthemeuconn}}
+\DeclareOptionBeamer{logo}{\PassOptionsToPackage{logo=#1}{beamerouterthemeuconn}}
+\ProcessOptionsBeamer
+
 \mode<presentation>
 
 % Sub-themes

@@ -10,6 +10,7 @@ header-includes: |
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
 theme: uconn
+themeoptions: bgleaf,logo=uconnhealth
 ---
 
 ## Markdown + Pandoc
@@ -45,7 +46,10 @@ The [YAML](https://yaml.org/) front matter at the top of `uconn-theme-markdown.m
 aspectratio: 169
 section-titles: false
 theme: uconn
+themeoptions: bgleaf,logo=uconnhealth
 ```
+
+The `theme` variable calls the `uconn` Beamer theme, and the `themeoptions` variables receives options that are passed to the theme.
 
 Find [a list of Beamer-specific variables](https://pandoc.org/MANUAL.html#variables-for-beamer-slides) that can be set in the front matter at the Pandoc User's Guide.
 

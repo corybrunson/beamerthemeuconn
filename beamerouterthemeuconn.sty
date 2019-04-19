@@ -1,10 +1,25 @@
+% Background leaf option (logical)
+\newif\if@uconn@bgleaf
+\@uconn@bgleaffalse
+\DeclareOptionBeamer{bgleaf}{\@uconn@bgleaftrue}
+% Footer logo option (multiple choice)
+\DeclareOptionBeamer{logo}{\def\beamer@uconn@logo{#1}}
+
+\ExecuteOptionsBeamer{logo=uconn}
+\ProcessOptionsBeamer
+
 \mode<presentation>
 
+\def\beamer@uconn@logouconn{uconn}
+\def\beamer@uconn@logouconnhealth{uconnhealth}
+
 % Background image
-\usebackgroundtemplate
-{
-  \includegraphics[height=\paperheight, trim=170 0 0 0, clip=true, decodearray={0.95 1 0.95 1 0.95 1}]{images/oak-leaf/oak-leaf-blue.png}
-}
+\if@uconn@bgleaf
+  \usebackgroundtemplate
+  {
+    \includegraphics[height=\paperheight, trim=170 0 0 0, clip=true, decodearray={0.95 1 0.95 1 0.95 1}]{images/oak-leaf/oak-leaf-blue.png}
+  }
+\fi
 
 % Footline logo
 \setbeamertemplate{footline}
@@ -13,7 +28,15 @@
   \hbox{
     \begin{beamercolorbox}[wd=\paperwidth, dp=3ex, leftskip=.5cm, rightskip=.5cm]{institution in head/foot}
       \hfill
-      \includegraphics[height=4ex]{images/woodmarks/uconn-health-wordmark-stacked-blue.png}
+      % Choose logo file based on `logo` option
+      \ifx\beamer@uconn@logo\beamer@uconn@logouconn
+        \includegraphics[height=4ex]{images/woodmarks/uconn-wordmark-single-blue.png}
+      \else
+        \ifx\beamer@uconn@logo\beamer@uconn@logouconnhealth
+          \includegraphics[height=4ex]{images/woodmarks/uconn-health-wordmark-stacked-blue.png}
+        \fi
+      \fi
+
     \end{beamercolorbox}
   }
   \vskip0pt

@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 
 \useinnertheme{uconn}
-\useoutertheme{uconn}
+\useoutertheme[bgleaf,logo=uconnhealth]{uconn}
 %\useoutertheme[footline=authorinstitute,subsection=true]{miniframes}
 %\useoutertheme{sidebar}
 \usecolortheme{default}
@@ -34,9 +34,35 @@
 \section{Layout}
 
 
-\begin{frame}{Background}
+\begin{frame}[fragile]{Background}
 
-The background image is a faded navy blue oak leaf, stored as a PNG. Like the other images used in this theme, it comes from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
+The background image is a faded navy blue oak leaf, stored as a PNG.
+It is activated by the \verb|bgleaf| option:
+
+\begin{verbatim}
+\useoutertheme[bgleaf]{uconn}
+\end{verbatim}
+
+Like the others used in this theme, the image comes from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Logo}
+
+The woodmark used in the footer is determined by the \verb|logo| option:
+
+\begin{verbatim}
+\useoutertheme[logo=uconnhealth]{uconn}
+\end{verbatim}
+
+It currently accepts the following options:
+\begin{itemize}
+\item \verb|uconn|
+\item \verb|uconnhealth|
+\end{itemize}
+
+Any other option will produce no footer logo.
 
 \end{frame}
 
