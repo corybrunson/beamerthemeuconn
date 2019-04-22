@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usetheme{uconn}
+\usetheme[bgleaf,logo=uconnhealth]{uconn}
 
 \title[Beamer themes for UConn]{Beamer themes for the\\ University of Connecticut}
 \subtitle{part of a suite of themes}
@@ -47,9 +47,22 @@ This example slideshow is just a concatenation of two example slideshows for the
 \section{Layout}
 
 
-\begin{frame}{Background}
+\begin{frame}[fragile]{Icons}
 
-The background image is a faded navy blue oak leaf, stored as a PNG. Like the other images used in this theme, it comes from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
+The background image is a faded navy blue oak leaf, and the footer includes a UConn Health woodmark, both stored as PNGs.
+They are activated by the \verb|bgleaf| and \verb|logo| options:
+
+\begin{verbatim}
+\usetheme[bgleaf,logo=uconnhealth]{uconn}
+\end{verbatim}
+
+The \verb|logo| option currently accepts the following options:
+\begin{itemize}
+\item \verb|uconn|
+\item \verb|uconnhealth|
+\end{itemize}
+
+Like the others used in this theme, the image comes from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
 
 \end{frame}
 
