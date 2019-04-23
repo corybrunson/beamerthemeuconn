@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 
 \useinnertheme{uconn}
-\useoutertheme[bgleaf,logo=uconnhealth]{uconn}
+\useoutertheme[bgleaf,campus=health,orient=stacked]{uconn}
 %\useoutertheme[footline=authorinstitute,subsection=true]{miniframes}
 %\useoutertheme{sidebar}
 \usecolortheme{default}
@@ -50,19 +50,18 @@ Like the others used in this theme, the image comes from the \href{https://brand
 
 \begin{frame}[fragile]{Logo}
 
-The woodmark used in the footer is determined by the \verb|logo| option:
+The woodmark used in the footer can be determined by the \verb|logo| option, or it will be implicitly understood when values are passed to the \verb|campus| or \verb|orient| option:
 
 \begin{verbatim}
-\useoutertheme[logo=uconnhealth]{uconn}
+\useoutertheme[logo]{uconn}
+\useoutertheme[campus=health,orient=stacked]{uconn}
 \end{verbatim}
 
-It currently accepts the following options:
 \begin{itemize}
-\item \verb|uconn|
-\item \verb|uconnhealth|
+\item \verb|campus| understands the values \verb|health| (UConn Health), \verb|averypoint|, \verb|hartford|, \verb|stamford|, \verb|waterbury|, and \verb|none|.
+\item \verb|orient| understands \verb|side|, \verb|stacked|, and \verb|none|, but \verb|none| is changed to \verb|side| when a campus is specified.
 \end{itemize}
-
-Any other option will produce no footer logo.
+Passing other values is equivalent to passing no value.
 
 \end{frame}
 
@@ -87,7 +86,7 @@ An inverted-color oak leaf is encoded as \verb|\oakleafbox| (see the slide on cl
 \begin{frame}{Blocks}
 
 \begin{block}{Block}
-This is a text block, formatted as in the {\ttfamily default} template.
+This is a text block, formatted as in the default template.
 \end{block}
 
 \begin{alertblock}{Alert block}
