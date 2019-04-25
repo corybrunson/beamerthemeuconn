@@ -10,7 +10,7 @@ header-includes: |
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
 theme: uconn
-themeoptions: bgleaf,logo,campus=health,orient=side
+themeoptions: watermark=oakleaf,logo,campus=health,orient=side
 ---
 
 ## Markdown + Pandoc
@@ -46,7 +46,7 @@ The [YAML](https://yaml.org/) front matter at the top of `uconn-theme-markdown.m
 aspectratio: 169
 section-titles: false
 theme: uconn
-themeoptions: bgleaf,logo,campus=health,orient=side
+themeoptions: watermark=oakleaf,logo,campus=health,orient=side
 ```
 
 The `theme` variable calls the `uconn` Beamer theme, and the `themeoptions` variables receives options that are passed to the theme.

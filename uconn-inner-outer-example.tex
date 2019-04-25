@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 
 \useinnertheme{uconn}
-\useoutertheme[bgleaf,campus=health,orient=stacked]{uconn}
+\useoutertheme[watermark=seal,campus=health,orient=stacked]{uconn}
 %\useoutertheme[footline=authorinstitute,subsection=true]{miniframes}
 %\useoutertheme{sidebar}
 \usecolortheme{default}
@@ -34,23 +34,9 @@
 \section{Layout}
 
 
-\begin{frame}[fragile]{Background}
-
-The background image is a faded navy blue oak leaf, stored as a PNG.
-It is activated by the \verb|bgleaf| option:
-
-\begin{verbatim}
-\useoutertheme[bgleaf]{uconn}
-\end{verbatim}
-
-Like the others used in this theme, the image comes from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
-
-\end{frame}
-
-
 \begin{frame}[fragile]{Logo}
 
-The woodmark used in the footer can be determined by the \verb|logo| option, or it will be implicitly understood when values are passed to the \verb|campus| or \verb|orient| option:
+The woodmark used in the footer can be determined by the \verb|logo| option, or it will be implicitly understood when values are passed to the \verb|campus| and/or \verb|orient| options:
 
 \begin{verbatim}
 \useoutertheme[logo]{uconn}
@@ -62,6 +48,21 @@ The woodmark used in the footer can be determined by the \verb|logo| option, or 
 \item \verb|orient| understands \verb|side|, \verb|stacked|, and \verb|none|, but \verb|none| is changed to \verb|side| when a campus is specified.
 \end{itemize}
 Passing other values is equivalent to passing no value.
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Background}
+
+The faded background image is activated by the \verb|watermark| option, which defaults to \verb|none| but can also be set to \verb|oakleaf| or \verb|seal|:
+
+\begin{verbatim}
+\useoutertheme[watermark=seal]{uconn}
+\end{verbatim}
+
+The UConn Health seal is used when \verb|campus=health|; otherwise, the general UConn seal is used.
+
+Like the others used in this theme, the watermark images come from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
 
 \end{frame}
 

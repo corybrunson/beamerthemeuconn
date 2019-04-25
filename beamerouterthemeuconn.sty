@@ -1,27 +1,24 @@
-% Background leaf option (logical)
-\newif\if@uconn@bgleaf\@uconn@bgleaffalse
-\DeclareOptionBeamer{bgleaf}{\@uconn@bgleaftrue}
+% Background watermark image
+\DeclareOptionBeamer{watermark}{\def\beamer@uconn@watermark{#1}}
 
-% Footer logo option (multiple choice)
+% Footer logo option (logical indicator + multiple choice)
 \newif\if@uconn@logo\@uconn@logofalse
 \DeclareOptionBeamer{logo}{\@uconn@logotrue}
 \DeclareOptionBeamer{campus}{\def\beamer@uconn@campus{#1}}
 \DeclareOptionBeamer{orient}{\def\beamer@uconn@orient{#1}}
 
+% Default options
+\ExecuteOptionsBeamer{watermark=none}
 \ExecuteOptionsBeamer{campus=none}
 \ExecuteOptionsBeamer{orient=none}
+
 \ProcessOptionsBeamer
 
 \mode<presentation>
 
-% Background image
-\if@uconn@bgleaf
-  \usebackgroundtemplate
-  {
-    \includegraphics[height=\paperheight, trim=170 0 0 0, clip=true, decodearray={0.95 1 0.95 1 0.95 1}]{images/oak-leaf/oak-leaf-blue.png}
-  }
-\fi
-
+% Encode watermark options
+\def\beamer@uconn@watermarkoakleaf{oakleaf}
+\def\beamer@uconn@watermarkseal{seal}
 % Encode campus options
 \def\beamer@uconn@campusnone{none}
 \def\beamer@uconn@campushealth{health}
@@ -33,6 +30,24 @@
 \def\beamer@uconn@orientnone{none}
 \def\beamer@uconn@orientside{side}
 \def\beamer@uconn@orientstacked{stacked}
+
+% Background image
+\usebackgroundtemplate{
+  % Oak leaf watermark
+  \ifx\beamer@uconn@watermark\beamer@uconn@watermarkoakleaf
+    \includegraphics[height=\paperheight, trim=170 0 0 0, clip=true, decodearray={0.95 1 0.95 1 0.95 1}]{images/oak-leaf/oak-leaf-blue.png}
+  \fi
+  % Seal watermark
+  \ifx\beamer@uconn@watermark\beamer@uconn@watermarkseal
+    \vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
+      \ifx\beamer@uconn@campus\beamer@uconn@campushealth
+        \includegraphics[height=.5\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/uconnhealth-seal-blue.png}
+      \else
+        \includegraphics[height=.5\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/seal-blue.png}
+      \fi
+    \hfil}\vfil}
+  \fi
+}
 
 % If campus or orient is specified, then set logo
 \unless\ifx\beamer@uconn@campus\@nnil

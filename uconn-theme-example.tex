@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usetheme[bgleaf,campus=health,orient=stacked]{uconn}
+\usetheme[watermark=oakleaf,campus=health,orient=stacked]{uconn}
 
 \title[Beamer themes for UConn]{Beamer themes for the\\ University of Connecticut}
 \subtitle{part of a suite of themes}
@@ -50,10 +50,13 @@ This example slideshow is just a concatenation of two example slideshows for the
 \begin{frame}[fragile]{Icons}
 
 The background image is a faded navy blue oak leaf, and the footer includes a UConn Health woodmark, both stored as PNGs.
-They are activated by the \verb|bgleaf| and \verb|logo| options, with some additional options that control the logo:
+They are activated by the \verb|watermark| and \verb|logo| options, with some additional options that control the logo:
 
 \begin{verbatim}
-\usetheme[bgleaf,logo,campus=health,orient=stacked]{uconn}
+\usetheme[
+  watermark=oakleaf,
+  campus=health,orient=stacked
+]{uconn}
 \end{verbatim}
 
 See {\ttfamily uconn-inner-outer-theme-example.tex} for details on the logo options.
