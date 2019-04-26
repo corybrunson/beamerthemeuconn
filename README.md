@@ -44,7 +44,7 @@ If you think these themes could be improved, please make suggestions in an [issu
 
 I'm grateful to Christine Ballestrini for reviewing the theme and discussing issues of branding and licensing. Some elements of the theme were inspired from [Jorge M. Agüero's (unofficial) UConn Beamer template](https://wp.jorge-aguero.uconn.edu/links/).
 
-The [Beamer class users guide](http://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf) and Thierry Masson's [cheat sheet](http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf) were indispensable to the development of the theme, as were several helpful discussions on [the \TeX--\LaTeX\ Stack Exchange](https://tex.stackexchange.com/).
+The [Beamer class users guide](http://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf) and Thierry Masson's [cheat sheet](http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf) were indispensable to the development of the theme, as were several helpful discussions on [Stack Exchange](https://tex.stackexchange.com/).
 
 ### License
 
