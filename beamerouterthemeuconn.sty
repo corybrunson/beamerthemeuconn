@@ -1,35 +1,35 @@
+% Campus option (influences effects of other options)
+\DeclareOptionBeamer{campus}{\def\beamer@uconn@campus{#1}}
 % Background watermark image
 \DeclareOptionBeamer{watermark}{\def\beamer@uconn@watermark{#1}}
-
-% Footer logo option (logical indicator + multiple choice)
-\newif\if@uconn@logo\@uconn@logofalse
-\DeclareOptionBeamer{logo}{\@uconn@logotrue}
-\DeclareOptionBeamer{campus}{\def\beamer@uconn@campus{#1}}
-\DeclareOptionBeamer{orient}{\def\beamer@uconn@orient{#1}}
+% Footline logo option
+\DeclareOptionBeamer{logo}{\def\beamer@uconn@logo{#1}}
 
 % Default options
-\ExecuteOptionsBeamer{watermark=none}
 \ExecuteOptionsBeamer{campus=none}
-\ExecuteOptionsBeamer{orient=none}
+\ExecuteOptionsBeamer{watermark=none}
+\ExecuteOptionsBeamer{logo=none}
 
 \ProcessOptionsBeamer
 
 \mode<presentation>
 
-% Encode watermark options
-\def\beamer@uconn@watermarkoakleaf{oakleaf}
-\def\beamer@uconn@watermarkseal{seal}
 % Encode campus options
 \def\beamer@uconn@campusnone{none}
 \def\beamer@uconn@campushealth{health}
+\def\beamer@uconn@campusjdh{jdh}
 \def\beamer@uconn@campusaverypoint{averypoint}
 \def\beamer@uconn@campushartford{hartford}
 \def\beamer@uconn@campusstamford{stamford}
 \def\beamer@uconn@campuswaterbury{waterbury}
-% Encode orient options
-\def\beamer@uconn@orientnone{none}
-\def\beamer@uconn@orientside{side}
-\def\beamer@uconn@orientstacked{stacked}
+% Encode watermark options
+\def\beamer@uconn@watermarkoakleaf{oakleaf}
+\def\beamer@uconn@watermarkseal{seal}
+% Encode logo options
+\def\beamer@uconn@logonone{none}
+\def\beamer@uconn@logosingle{single}
+\def\beamer@uconn@logoside{side}
+\def\beamer@uconn@logostacked{stacked}
 
 % Background image
 \usebackgroundtemplate{
@@ -49,92 +49,71 @@
   \fi
 }
 
-% If campus or orient is specified, then set logo
-\unless\ifx\beamer@uconn@campus\@nnil
-  \@uconn@logotrue
-\fi
-\unless\ifx\beamer@uconn@orient\@nnil
-  \@uconn@logotrue
-\fi
-% If campus is specified but orient is not, then set orient to side
-\unless\ifx\beamer@uconn@campus\beamer@uconn@campusnone
-  \ifx\beamer@uconn@orient\beamer@uconn@orientnone
-    \def\beamer@uconn@orient{side}
-  \fi
-\fi
-
 % Footline logo
-\setbeamertemplate{footline}
-{
-  \leavevmode
-  \hbox{
-    \begin{beamercolorbox}[wd=\paperwidth, dp=3ex, leftskip=.5cm, rightskip=.5cm]{institution in head/foot}
-      \hfill
-      % If logo:
-      \if@uconn@logo
-        % Different options for each campus
-        \ifx\beamer@uconn@campus\beamer@uconn@campusnone
-          % Orientations for campus non-specific logo
-          \ifx\beamer@uconn@orient\beamer@uconn@orientnone
-            \includegraphics[height=4ex]{images/logos/uconn-wordmark-single-blue.png}
-          \fi
-          \ifx\beamer@uconn@orient\beamer@uconn@orientside
+\unless\ifx\beamer@uconn@logo\beamer@uconn@logonone
+  \setbeamertemplate{footline}
+  {
+    \leavevmode
+    \hbox{
+      \begin{beamercolorbox}[wd=\paperwidth, dp=3ex, leftskip=.5cm, rightskip=.5cm]{institution in head/foot}
+        \hfill
+        % Single logo
+        \ifx\beamer@uconn@logo\beamer@uconn@logosingle
+          \includegraphics[height=4ex]{images/logos/uconn-wordmark-single-blue.png}
+        \fi
+        % Side logos
+        \ifx\beamer@uconn@logo\beamer@uconn@logoside
+          \ifx\beamer@uconn@campus\beamer@uconn@campusnone
             \includegraphics[height=4ex]{images/logos/uconn-wordmark-side-blue.png}
           \fi
-          \ifx\beamer@uconn@orient\beamer@uconn@orientstacked
-            \includegraphics[height=4ex]{images/logos/uconn-wordmark-stacked-blue.png}
-          \fi
-        \fi
-        \ifx\beamer@uconn@campus\beamer@uconn@campushealth
-          % Orientations for UConn Health logo
-          \ifx\beamer@uconn@orient\beamer@uconn@orientside
+          \ifx\beamer@uconn@campus\beamer@uconn@campushealth
             \includegraphics[height=4ex]{images/logos/uconn-health-wordmark-side-blue.png}
           \fi
-          \ifx\beamer@uconn@orient\beamer@uconn@orientstacked
-            \includegraphics[height=4ex]{images/logos/uconn-health-wordmark-stacked-blue.png}
+          \ifx\beamer@uconn@campus\beamer@uconn@campusjdh
+            \includegraphics[height=4ex]{images/logos/jdh-side-blue.png}
           \fi
-        \fi
-        \ifx\beamer@uconn@campus\beamer@uconn@campusaverypoint
-          % Orientations for Avery Point logo
-          \ifx\beamer@uconn@orient\beamer@uconn@orientside
+          \ifx\beamer@uconn@campus\beamer@uconn@campusaverypoint
             \includegraphics[height=4ex]{images/logos/avery-point-wordmark-side-blue.png}
           \fi
-          \ifx\beamer@uconn@orient\beamer@uconn@orientstacked
-            \includegraphics[height=4ex]{images/logos/avery-point-wordmark-stacked-blue.png}
-          \fi
-        \fi
-        \ifx\beamer@uconn@campus\beamer@uconn@campushartford
-          % Orientations for Hartford logo
-          \ifx\beamer@uconn@orient\beamer@uconn@orientside
+          \ifx\beamer@uconn@campus\beamer@uconn@campushartford
             \includegraphics[height=4ex]{images/logos/hartford-wordmark-side-blue.png}
           \fi
-          \ifx\beamer@uconn@orient\beamer@uconn@orientstacked
-            \includegraphics[height=4ex]{images/logos/hartford-wordmark-stacked-blue.png}
-          \fi
-        \fi
-        \ifx\beamer@uconn@campus\beamer@uconn@campusstamford
-          % Orientations for Stamford logo
-          \ifx\beamer@uconn@orient\beamer@uconn@orientside
+          \ifx\beamer@uconn@campus\beamer@uconn@campusstamford
             \includegraphics[height=4ex]{images/logos/stamford-wordmark-side-blue.png}
           \fi
-          \ifx\beamer@uconn@orient\beamer@uconn@orientstacked
-            \includegraphics[height=4ex]{images/logos/stamford-wordmark-stacked-blue.png}
-          \fi
-        \fi
-        \ifx\beamer@uconn@campus\beamer@uconn@campuswaterbury
-          % Orientations for Waterbury logo
-          \ifx\beamer@uconn@orient\beamer@uconn@orientside
+          \ifx\beamer@uconn@campus\beamer@uconn@campuswaterbury
             \includegraphics[height=4ex]{images/logos/waterbury-wordmark-side-blue.png}
           \fi
-          \ifx\beamer@uconn@orient\beamer@uconn@orientstacked
+        \fi
+        % Stacked logos
+        \ifx\beamer@uconn@logo\beamer@uconn@logostacked
+          \ifx\beamer@uconn@campus\beamer@uconn@campusnone
+            \includegraphics[height=4ex]{images/logos/uconn-wordmark-stacked-blue.png}
+          \fi
+          \ifx\beamer@uconn@campus\beamer@uconn@campushealth
+            \includegraphics[height=4ex]{images/logos/uconn-health-wordmark-stacked-blue.png}
+          \fi
+          \ifx\beamer@uconn@campus\beamer@uconn@campusjdh
+            \includegraphics[height=4ex]{images/logos/jdh-stacked-blue.png}
+          \fi
+          \ifx\beamer@uconn@campus\beamer@uconn@campusaverypoint
+            \includegraphics[height=4ex]{images/logos/avery-point-wordmark-stacked-blue.png}
+          \fi
+          \ifx\beamer@uconn@campus\beamer@uconn@campushartford
+            \includegraphics[height=4ex]{images/logos/hartford-wordmark-stacked-blue.png}
+          \fi
+          \ifx\beamer@uconn@campus\beamer@uconn@campusstamford
+            \includegraphics[height=4ex]{images/logos/stamford-wordmark-stacked-blue.png}
+          \fi
+          \ifx\beamer@uconn@campus\beamer@uconn@campuswaterbury
             \includegraphics[height=4ex]{images/logos/waterbury-wordmark-stacked-blue.png}
           \fi
         \fi
-      \fi
-    \end{beamercolorbox}
+      \end{beamercolorbox}
+    }
+    \vskip0pt
   }
-  \vskip0pt
-}
+\fi
 % More woodmarks can be found at the Brand Standard website:
 % https://brand.uconn.edu/downloads/logos/
 

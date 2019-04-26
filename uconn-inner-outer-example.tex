@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 
 \useinnertheme{uconn}
-\useoutertheme[watermark=seal,campus=health,orient=stacked]{uconn}
+\useoutertheme[campus=health,watermark=seal,logo=stacked]{uconn}
 %\useoutertheme[footline=authorinstitute,subsection=true]{miniframes}
 %\useoutertheme{sidebar}
 \usecolortheme{default}
@@ -36,16 +36,15 @@
 
 \begin{frame}[fragile]{Logo}
 
-The woodmark used in the footer can be determined by the \verb|logo| option, or it will be implicitly understood when values are passed to the \verb|campus| and/or \verb|orient| options:
+The woodmark used in the footer can be determined by the \verb|logo| option and specialized by the \verb|campus| option:
 
 \begin{verbatim}
-\useoutertheme[logo]{uconn}
-\useoutertheme[campus=health,orient=stacked]{uconn}
+\useoutertheme[campus=health,logo=stacked]{uconn}
 \end{verbatim}
 
 \begin{itemize}
-\item \verb|campus| understands the values \verb|health| (UConn Health), \verb|averypoint|, \verb|hartford|, \verb|stamford|, \verb|waterbury|, and \verb|none|.
-\item \verb|orient| understands \verb|side|, \verb|stacked|, and \verb|none|, but \verb|none| is changed to \verb|side| when a campus is specified.
+\item \verb|campus| understands the values \verb|health| (UConn Health), \verb|jdh| (John Dempsey Hospital), \verb|averypoint|, \verb|hartford|, \verb|stamford|, \verb|waterbury|, and \verb|none|.
+\item \verb|logo| understands \verb|single| (no annotation), \verb|side|, \verb|stacked|, and \verb|none| (no logo, and no footline).
 \end{itemize}
 Passing other values is equivalent to passing no value.
 
