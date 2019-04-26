@@ -14,11 +14,12 @@ This repo contains the following coordinated Beamer themes:
 - `beamerouterthemeuconn.sty` (outer theme)
 - `beamerthemeuconn.sty` (theme incorporating the above)
 
-They're not complete, but they demonstrate the basics of each type of theme.
+Together, they demonstrate the basics of each type of theme.
 
 ### Templates
 
 Three templates are included, which illustrate the color and font themes (`uconn-color-font-example.tex`), the inner and outer themes (`uconn-inner-outer-example.tex`), and all four themes (`uconn-theme-example.tex`).
+
 Additionally, the Markdown document `uconn-theme-markdown.md` illustrates how to use the `uconn` Beamer theme in a [Pandoc](https://pandoc.org/) workflow.
 
 It would be useful to include poster and report templates as well; i don't have plans for this, but contributions would be welcome.
@@ -39,6 +40,12 @@ To see several university themes that illustrate a range of design space, check 
 
 If you think these themes could be improved, please make suggestions in an [issue](https://guides.github.com/features/issues/) or send a [pull request](https://guides.github.com/activities/forking/)!
 
-## License
+## Acknowledgments
+
+I'm grateful to Christine Ballestrini for reviewing the theme and discussing issues of branding and licensing. Some elements of the theme were inspired from [Jorge M. Agüero's (unofficial) UConn Beamer template](https://wp.jorge-aguero.uconn.edu/links/).
+
+The [Beamer class users guide](http://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf) and Thierry Masson's [cheat sheet](http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf) were indispensable to the development of the theme, as were several helpful discussions on [the \TeX--\LaTeX\ Stack Exchange](https://tex.stackexchange.com/).
+
+### License
 
 The code, including templates and examples, are [products of authorship](http://research.uconn.edu/technology-commercialization/resources-for-faculty/tech-transfer-faqs/invention-ownership-flowchart/) and released into the public domain. Wordmarks and logos are [trademarks of the University of Connecticut](http://brand.uconn.edu/standards/wordmark-and-logos/) and used with permission. See the [University Logo and Wordmark Policy](http://policy.uconn.edu/2015/01/29/university-logo-and-wordmark/) for guidance or [email the Brands office](mailto:brand@uconn.edu) with questions.
