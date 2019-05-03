@@ -1,17 +1,22 @@
 \mode<presentation>
 
-% Helvetica package
-% https://ctan.org/pkg/helvet
+% Helvetica package (equivalent to Arial)
 \usepackage{helvet}
-% Helvetica clone
-%\renewcommand{\sfdefault}{phv}
+% Montserrat package (free alternative to Gotham)
+\usepackage{montserrat}
 
-% Default to sans-serif font
+% Override setting sans-serif to Montserrat
+\renewcommand{\sfdefault}{phv}
+% Default to Helvetica sans-serif font
 \renewcommand{\familydefault}{\sfdefault}
+% Shortcut to Montserrat
+%\newcommand\campusfamily[1]{{\fontfamily{Montserrat-TLF}\fontseries{sb}\selectfont #1}}
+\newcommand\montserratsb{\fontfamily{Montserrat-TLF}\fontseries{sb}\selectfont }
 
 % Font assignments
 
 \setbeamerfont*{titlelike}{size=\large}
-\setbeamerfont*{block title}{series=\bfseries}
+%\setbeamerfont*{block title}{series=\bfseries}
+\setbeamerfont*{block title}{family=\fontfamily{Montserrat-TLF},series=\fontseries{sb}}
 
 \mode<all>

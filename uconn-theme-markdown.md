@@ -1,7 +1,7 @@
 ---
 title: Beamer themes for the University of Connecticut
 author: Jason Cory Brunson, PhD
-date: 2019 March 27
+date: \today
 aspectratio: 169
 institute: |
   Center for Quantitative Medicine, UConn Health
@@ -72,10 +72,12 @@ These allow to use \LaTeX\ environments without the use of `\begin{}` and `\end{
 
 ## Blocks
 
-\blockbegin{Block Title}
+\blockbegin{Text Block}
 
 This text block is rendered using \verb|\blockbegin{Block Title}| and \verb|\blockend|.
 Since Pandoc interprets single carriage returns as spaces, two are required to separate these commands from the text they contain.
+
+Block titles are rendered in {\montserratsb Montserrat semibold}, a free alternative to the Gothic bold used for campus, college, and school woodmarks.
 
 \blockend
 
