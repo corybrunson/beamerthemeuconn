@@ -77,7 +77,7 @@ These allow to use \LaTeX\ environments without the use of `\begin{}` and `\end{
 This text block is rendered using \verb|\blockbegin{Block Title}| and \verb|\blockend|.
 Since Pandoc interprets single carriage returns as spaces, two are required to separate these commands from the text they contain.
 
-Block titles are rendered in {\montserratsb Montserrat semibold}, a free alternative to the Gothic bold used for campus, college, and school woodmarks.
+Block titles are rendered in \campus{Montserrat semibold}, a free alternative to the Gothic bold used for campus, college, and school woodmarks.
 
 \blockend
 
