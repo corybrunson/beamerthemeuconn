@@ -31,6 +31,10 @@
 \def\beamer@uconn@logoside{side}
 \def\beamer@uconn@logostacked{stacked}
 
+% Encode paper dimensions
+\def\beamer@paperwidth{\paperwidth}
+\def\beamer@paperheight{\paperheight}
+
 % Background image
 \usebackgroundtemplate{
   % Oak leaf watermark
@@ -39,13 +43,13 @@
   \fi
   % Seal watermark
   \ifx\beamer@uconn@watermark\beamer@uconn@watermarkseal
-    \vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
+    \vbox to \paperheight{\vspace*{.1\beamer@paperheight}\hbox to \paperwidth{\hfil
       \ifx\beamer@uconn@campus\beamer@uconn@campushealth
-        \includegraphics[height=.5\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/uconnhealth-seal-blue.png}
+        \includegraphics[height=.333\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/uconnhealth-seal-blue.png}
       \else
-        \includegraphics[height=.5\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/seal-blue.png}
+        \includegraphics[height=.333\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/seal-blue.png}
       \fi
-    \hfil}\vfil}
+    \hspace*{.1\beamer@paperheight}}\vfil}
   \fi
 }
 
