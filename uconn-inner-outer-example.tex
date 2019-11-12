@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 
 \useinnertheme{uconn}
-\useoutertheme[campus=health,watermark=seal,logo=stacked]{uconn}
+\useoutertheme[campus=health,watermark=corner,logo=stacked]{uconn}
 %\useoutertheme[footline=authorinstitute,subsection=true]{miniframes}
 %\useoutertheme{sidebar}
 \usecolortheme{default}
@@ -53,15 +53,13 @@ Passing other values is equivalent to passing no value.
 
 \begin{frame}[fragile]{Background}
 
-The faded background image is activated by the \verb|watermark| option, which defaults to \verb|none| but can also be set to \verb|oakleaf| or \verb|seal|:
+The faded oak leaf background image is activated by the \verb|watermark| option, which defaults to \verb|none| but can also be set to \verb|side| or \verb|corner|:
 
 \begin{verbatim}
-\useoutertheme[watermark=seal]{uconn}
+\useoutertheme[watermark=corner]{uconn}
 \end{verbatim}
 
-The UConn Health seal is used when \verb|campus=health|; otherwise, the general UConn seal is used.
-
-Like the others used in this theme, the watermark images come from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
+Like the others used in this theme, the watermark image comes from the \href{https://brand.uconn.edu/downloads/logos/}{bulk logos download at UConn Brand Standard}.
 
 \end{frame}
 

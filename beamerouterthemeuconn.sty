@@ -1,6 +1,6 @@
 % Campus option (influences effects of other options)
 \DeclareOptionBeamer{campus}{\def\beamer@uconn@campus{#1}}
-% Background watermark image
+% Watermark oak leaf location
 \DeclareOptionBeamer{watermark}{\def\beamer@uconn@watermark{#1}}
 % Footline logo option
 \DeclareOptionBeamer{logo}{\def\beamer@uconn@logo{#1}}
@@ -23,8 +23,8 @@
 \def\beamer@uconn@campusstamford{stamford}
 \def\beamer@uconn@campuswaterbury{waterbury}
 % Encode watermark options
-\def\beamer@uconn@watermarkoakleaf{oakleaf}
-\def\beamer@uconn@watermarkseal{seal}
+\def\beamer@uconn@watermarkside{side}
+\def\beamer@uconn@watermarkcorner{corner}
 % Encode logo options
 \def\beamer@uconn@logonone{none}
 \def\beamer@uconn@logosingle{single}
@@ -37,18 +37,14 @@
 
 % Background image
 \usebackgroundtemplate{
-  % Oak leaf watermark
-  \ifx\beamer@uconn@watermark\beamer@uconn@watermarkoakleaf
+  % Side watermark
+  \ifx\beamer@uconn@watermark\beamer@uconn@watermarkside
     \includegraphics[height=\paperheight, trim=170 0 0 0, clip=true, decodearray={0.95 1 0.95 1 0.95 1}]{images/oak-leaf/oak-leaf-blue.png}
   \fi
-  % Seal watermark
-  \ifx\beamer@uconn@watermark\beamer@uconn@watermarkseal
+  % Corner watermark
+  \ifx\beamer@uconn@watermark\beamer@uconn@watermarkcorner
     \vbox to \paperheight{\vspace*{.1\beamer@paperheight}\hbox to \paperwidth{\hfil
-      \ifx\beamer@uconn@campus\beamer@uconn@campushealth
-        \includegraphics[height=.333\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/uconnhealth-seal-blue.png}
-      \else
-        \includegraphics[height=.333\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/seals/seal-blue.png}
-      \fi
+      \includegraphics[height=.333\paperheight, decodearray={0.95 1 0.95 1 0.95 1}]{images/oak-leaf/oak-leaf-blue.png}
     \hspace*{.1\beamer@paperheight}}\vfil}
   \fi
 }
