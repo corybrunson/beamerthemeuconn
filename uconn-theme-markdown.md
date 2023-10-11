@@ -120,7 +120,7 @@ These and many other shorthands are documented in the [Pandoc User's Guide](http
 
 Since i didn't recognize them in previous documents, i'll thank here the designers of \TeX\ and \LaTeX, as well as those of Markdown and Pandoc, for making this exceedingly easy, while necessarily limited, plain text–to–PDF workflow possible.
 
-As in the other example documents, suggestions are very welcome! Email Cory ([brunson@uchc.edu](mailto:brunson@uchc.edu)), raise an issue, or submit a pull request (on a new branch).
+As in the other example documents, suggestions are very welcome! Email Cory ([cornelioid@gmail.com](mailto:cornelioid@gmail.com)), raise an issue, or submit a pull request (on a new branch).
 
 <!--
 pandoc uconn-theme-markdown.md \
