@@ -40,6 +40,8 @@ To see several university themes that illustrate a range of design space, check 
 
 If you think these themes could be improved, please make suggestions in an [issue](https://guides.github.com/features/issues/) or send a [pull request](https://guides.github.com/activities/forking/)!
 
+I am no longer at UConn Health, so if you've a mind to "adopt" these templates, feel free to ask. : )
+
 ## Acknowledgments
 
 I'm grateful to Christine Ballestrini for reviewing the theme and discussing issues of branding and licensing. Some elements of the theme were inspired from [Jorge M. Agüero's (unofficial) UConn Beamer template](https://wp.jorge-aguero.uconn.edu/links/).
